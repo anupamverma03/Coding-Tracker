@@ -210,7 +210,7 @@ GET /streak
 Anupam Verma
 
 GitHub:
-https://github.com/anupamverm03/
+https://github.com/anupamverma03/
 
 # License
 
