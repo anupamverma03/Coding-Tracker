@@ -48,56 +48,6 @@ This project demonstrates **full-stack development with authentication, REST API
 ---
 
 # Project Structure
-# Coding Tracker
-
-A full-stack web application that allows users to **track coding problems solved on platforms like LeetCode and Codeforces**.  
-Users can register, log in, and maintain a personal dashboard showing solved problems, statistics, and progress.
-
-This project demonstrates **full-stack development with authentication, REST APIs, database integration, and a React frontend**.
-
----
-
-# Features
-
-- User authentication (Register / Login using JWT)
-- Add solved coding problems
-- Track problems by:
-  - Platform (LeetCode / Codeforces)
-  - Difficulty (Easy / Medium / Hard)
-  - Tags
-- Dashboard with:
-  - Difficulty statistics
-  - Problem history
-  - Daily progress
-  - Platform statistics
-- Delete solved problems
-- Protected routes (login required)
-
----
-
-# Tech Stack
-
-## Backend
-- Python
-- FastAPI
-- SQLAlchemy
-- MySQL
-- JWT Authentication
-- Uvicorn
-
-## Frontend
-- React
-- Axios
-- React Router
-- CSS
-
-## Tools
-- Git
-- GitHub
-
----
-
-# Project Structure
 coding_tracker
 │
 ├── backend
@@ -127,7 +77,7 @@ coding_tracker
 
 # Installation
 
-## 1 Clone the Repository
+## 1. Clone the Repository
 
 ```
 bash
@@ -137,7 +87,7 @@ cd coding-tracker
 
 ---
 
-# Backend Setup
+## 2. Backend Setup
 
 Go to backend folder in terminal
 
@@ -168,3 +118,81 @@ Backend will run at
 API documentation (Swagger)
 
 `http`://127.0.0.1:8000/docs`
+
+## 3. Frontend Setup
+
+Go to frontend folder
+
+```
+cd frontend
+```
+
+Install dependencies
+
+```npm install
+```
+
+Run React development server
+
+```npm start
+```
+
+Frontend will run at
+
+```http://localhost:3000
+```
+
+### API Endpoints
+-Authentication
+```POST /register
+POST /login
+GET /profile
+```
+-Problem Management
+```POST /add-problem
+GET /problems
+DELETE /problems/{id}
+```
+-Statistics
+```GET /stats
+GET /platform-stats
+GET /daily-progress
+GET /streak
+```
+
+# Example Workflow
+
+-Register a new user
+
+-Login to receive JWT token
+
+-Add solved coding problems
+
+-View dashboard statistics
+
+-Track progress over time
+
+# Future Improvements
+
+-Integration with LeetCode API
+
+-Integration with Codeforces API
+
+-Graph visualizations for progress
+
+-Problem search and filtering
+
+-Deployment using Docker or AWS
+
+-Leaderboard for users
+
+# Author
+
+Anupam Verma
+
+GitHub:
+https://github.com/anupamverm03/
+
+3 License
+
+This project is open source and available under the MIT License.
