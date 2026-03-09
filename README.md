@@ -132,7 +132,7 @@ http://127.0.0.1:8000
 API documentation (Swagger)
 
 ```
-http`://127.0.0.1:8000/docs
+http://127.0.0.1:8000/docs
 ```
 
 ## 3. Frontend Setup
