@@ -48,6 +48,7 @@ This project demonstrates **full-stack development with authentication, REST API
 ---
 
 # Project Structure
+```text
 coding_tracker
 │
 ├── backend
@@ -91,33 +92,47 @@ cd coding-tracker
 
 Go to backend folder in terminal
 
-`cd backend`
+```
+cd backend
+```
 
 Create virtual environment
 
-`python -m venv venv`
+```
+python -m venv venv
+```
 
 Activate environment
 
 Windows
 
-`venv\Scripts\activate`
+```
+venv\Scripts\activate
+```
 
 Install dependencies
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 Run the backend server
 
-`uvicorn main:app --reload`
+```
+uvicorn main:app --reload
+```
 
 Backend will run at
 
-`http://127.0.0.1:8000`
+```
+http://127.0.0.1:8000
+```
 
 API documentation (Swagger)
 
-`http`://127.0.0.1:8000/docs`
+```
+http`://127.0.0.1:8000/docs
+```
 
 ## 3. Frontend Setup
 
@@ -129,7 +144,8 @@ cd frontend
 
 Install dependencies
 
-```npm install
+```
+npm install
 ```
 
 Run React development server
@@ -145,17 +161,17 @@ http://localhost:3000
 ```
 
 ### API Endpoints
--Authentication
+- Authentication
 ```POST /register
 POST /login
 GET /profile
 ```
--Problem Management
+- Problem Management
 ```POST /add-problem
 GET /problems
 DELETE /problems/{id}
 ```
--Statistics
+- Statistics
 ```GET /stats
 GET /platform-stats
 GET /daily-progress
@@ -164,29 +180,29 @@ GET /streak
 
 # Example Workflow
 
--Register a new user
+- Register a new user
 
--Login to receive JWT token
+- Login to receive JWT token
 
--Add solved coding problems
+- Add solved coding problems
 
--View dashboard statistics
+- View dashboard statistics
 
--Track progress over time
+- Track progress over time
 
 # Future Improvements
 
--Integration with LeetCode API
+- Integration with LeetCode API
 
--Integration with Codeforces API
+- Integration with Codeforces API
 
--Graph visualizations for progress
+- Graph visualizations for progress
 
--Problem search and filtering
+- Problem search and filtering
 
--Deployment using Docker or AWS
+- Deployment using Docker or AWS
 
--Leaderboard for users
+- Leaderboard for users
 
 # Author
 
@@ -195,6 +211,6 @@ Anupam Verma
 GitHub:
 https://github.com/anupamverm03/
 
-3 License
+# License
 
 This project is open source and available under the MIT License.
