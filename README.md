@@ -134,12 +134,14 @@ Install dependencies
 
 Run React development server
 
-```npm start
+```
+npm start
 ```
 
 Frontend will run at
 
-```http://localhost:3000
+```
+http://localhost:3000
 ```
 
 ### API Endpoints
