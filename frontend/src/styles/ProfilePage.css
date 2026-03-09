@@ -1,0 +1,31 @@
+.profile-container{
+max-width:600px;
+margin:40px auto;
+font-family:Arial;
+}
+
+.profile-card{
+background:white;
+padding:20px;
+border-radius:6px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-card p{
+margin:10px 0;
+}
+
+.easy{
+color:green;
+font-weight:bold;
+}
+
+.medium{
+color:orange;
+font-weight:bold;
+}
+
+.hard{
+color:red;
+font-weight:bold;
+}
