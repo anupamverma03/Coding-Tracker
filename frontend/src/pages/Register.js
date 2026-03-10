@@ -4,6 +4,7 @@ import "../styles/Register.css"
 
 function Register() {
 
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
@@ -11,6 +12,7 @@ function Register() {
     e.preventDefault()
 
     await API.post("/register", {
+      name: name,
       email: email,
       password: password
     })
@@ -24,6 +26,14 @@ function Register() {
       <h2 className="register-title">Register</h2>
 
       <form className="register-form" onSubmit={handleSubmit}>
+
+        <input
+          className="register-input"
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={(e)=>setName(e.target.value)}
+        />
 
         <input
           className="register-input"

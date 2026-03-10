@@ -43,6 +43,8 @@ return(
 
 <div className="profile-card">
 
+<p><strong>Name:</strong> {user.name}</p>
+<p><strong>CodeForce Handle:</strong> {user.cf_handle}</p>
 <p><strong>Email:</strong> {user.email}</p>
 <p><strong>Total Problems:</strong> {stats.total}</p>
 <p className="easy">Easy: {stats.easy}</p>

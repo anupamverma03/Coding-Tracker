@@ -26,7 +26,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 # Password helpers
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -53,6 +52,7 @@ def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
     hashed_password = hash_password(user.password)
 
     new_user = models.User(
+        name = user.name,
         email=user.email,
         password=hashed_password
     )
@@ -67,7 +67,7 @@ def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
 # Login
 
 @app.post("/login")
-def login(user: schemas.UserCreate, db: Session = Depends(get_db)):
+def login(user: schemas.UserLogin, db: Session = Depends(get_db)):
 
     db_user = db.query(models.User).filter(
         models.User.email == user.email
@@ -283,6 +283,7 @@ def get_profile(
     return {
         "user": {
             "id": current_user.id,
+            "name": current_user.name,
             "email": current_user.email
         },
         "stats": {
@@ -292,3 +293,26 @@ def get_profile(
             "hard": hard
         }
     }
+
+# CodeForces API
+
+import requests
+from fastapi import APIRouter
+
+router = APIRouter()
+
+@router.get("/codeforces/{handle}")
+def get_cf_problems(handle: str):
+
+    url = f"https://codeforces.com/api/user.status?handle={handle}"
+
+    res = requests.get(url).json()
+
+    solved = set()
+
+    for sub in res["result"]:
+        if sub["verdict"] == "OK":
+            p = sub["problem"]
+            solved.add(f'{p["contestId"]}{p["index"]}')
+
+    return {"solved": list(solved)}

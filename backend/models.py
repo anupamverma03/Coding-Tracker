@@ -10,6 +10,9 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String(100), unique=True)
     password = Column(String(255))
+    name = Column(String(50))
+    cf_handle = Column(String(50))
+
 
 class Problem(Base):
     __tablename__ = "problems"

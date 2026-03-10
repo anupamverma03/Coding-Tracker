@@ -15,6 +15,7 @@ font-weight:bold;
 .nav-links{
 display:flex;
 gap:20px;
+align-items:center;
 }
 
 .nav-links a{
@@ -38,4 +39,10 @@ border-radius:4px;
 
 .logout-btn:hover{
 background:#c82333;
+}
+
+.navbar-user{
+font-weight:500;
+border: 1px;
+border-radius:4px;
 }
